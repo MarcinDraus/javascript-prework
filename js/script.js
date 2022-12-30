@@ -29,3 +29,29 @@ if(playerInput == '1'){
       playerMove = 'nozyce'
   }
 printMessage('Twój ruch to: ' + playerMove);
+
+if( computerMove == 'kamień' && playerMove == 'papier'){
+    printMessage('Ty wygrywasz!');
+  }else if( computerMove == 'papier' && playerMove == 'nozyce'){
+    printMessage('Ty wygrywasz!');
+  }else if( computerMove == 'nozyce' && playerMove == 'kamień'){
+    printMessage('Ty wygrywasz!');
+  }else if(playerMove == 'kamień' && computerMove == 'papier'){
+    printMessage('computer wygrywa');
+  }else if(playerMove =='papier' && computerMove == 'nozyce'){
+    printMessage('computer wygrywa');
+  }else if(playerMove == 'nozyce' && computerMove == 'kamień'){
+    printMessage('computer wygrywa');
+  }else if(computerMove == 'kamień' && playerMove == 'kamień'){
+    printMessage('remis');
+  }else if(computerMove == 'papier' && playerMove == 'papier'){
+    printMessage('remis');
+  }else if(computerMove == 'nozyce' && playerMove == 'noozyce'){
+    printMessage('remis');
+  }else if(playerMove == 'kamień' && computerMove == 'kamień'){
+    printMessage('remis');
+  }else if(playerMove == 'papier' && computerMove == 'papier'){
+    printMessage('remis');
+  }else if(playerMove == 'nozyce' && computerMove == 'nozyce'){
+    printMessage('remis');
+  }
