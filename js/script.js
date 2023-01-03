@@ -1,4 +1,3 @@
-
 function  playGame(playerInput){
     clearMessages()
 
@@ -13,21 +12,13 @@ function  playGame(playerInput){
             return 'papier';
         }else if (argMoveId == 3){
             return 'nozyce';
-        }
-        printMessage('Nie znam ruchu o id:' + argMoveId+ '.');
+        } /*printMessage('Nie znam ruchu o id:' + argMoveId+ '.');*/
         return 'nieznany ruch';
     }
-
-   printMessage('Computera ruch to: ' + computerMove);
-
-
-    let playerMove = getMoveName(/*playerInput*/);
-
-
-   printMessage('Twój ruch to: ' + playerMove);
-   
-
-    displayResult(computerMove, playerMove);
+   /*printMessage('Computera ruch to: ' + computerMove);*/
+    let playerMove = getMoveName(playerInput);
+     /*printMessage('Twój ruch to: ' + playerMove);*/
+   displayResult(computerMove, playerMove);
 
    function displayResult(argComputerMove, argPlayerMove){
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
@@ -41,17 +32,16 @@ function  playGame(playerInput){
     }else if(argComputerMove == 'nozyce' && argPlayerMove == 'kamień'){
         printMessage('Ty wygrywasz!');
     } else {
-         printMessage('przegrałeś');
-        }
+        printMessage('przegrałeś');
+       }
    }
 }    
-  document.getElementById('play-rock').addEventListener('click', function(){
-    playGame('Kamień');
+document.getElementById('play-rock').addEventListener('click', function(){
+    playGame(1);
   });
   document.getElementById('play-paper').addEventListener('click', function(){
-    playGame('Papier');
+    playGame(2);
   });
   document.getElementById('play-scissors').addEventListener('click', function(){
-    playGame('Nozyce');
+    playGame(3);
   });
-  
